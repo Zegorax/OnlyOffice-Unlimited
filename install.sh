@@ -2,7 +2,9 @@
 
 FILE=OO_PubKey
 if test -f "$FILE"; then
-    apt-get update && apt-get install -y python3.6-dev 
+  echo Patch has already been applied. Starting DocumentServer...
+else
+  apt-get update && apt-get install -y python3.6-dev 
     wget https://bootstrap.pypa.io/get-pip.py
     python3.6 get-pip.py
     pip install pycrypto
@@ -82,7 +84,7 @@ if test -f "$FILE"; then
         f.write(replacedData)
         f.close()
 
-    EOF
+EOF
 
     python3.6 index.py
 
