@@ -3,7 +3,7 @@ Script generating a valid license for OnlyOffice DocumentServer
 
 # What is going on in this script
 ## Key generation
-At the beginning, the script will generate a RSA SHA1 key pair and generate a signature for the custom licence file.
+At the beginning, the script will generate a RSA SHA1 key pair and generate a signature for the custom license file.
 After this step, it will append the signature as a key to the licence JSON dictionary and save it.
 We then also save the public key, which we will use in OO to verify our license.
 
@@ -14,3 +14,6 @@ OnlyOffice changed the way they ship their Docker images for IE (Integration Edi
 Change the entrypoint of your docker-compose file to :
 
 `entrypoint: bash -c "wget https://raw.githubusercontent.com/Zegorax/OnlyOffice-Unlimited/master/install.sh && bash install.sh"`
+
+# Conclusion
+You now have a working OnlyOffice license generator 
