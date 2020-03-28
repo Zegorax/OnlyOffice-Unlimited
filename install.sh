@@ -8,7 +8,8 @@ else
     wget https://bootstrap.pypa.io/get-pip.py
     python3.6 get-pip.py
     pip install pycrypto
-
+    rm -f /var/www/onlyoffice/Data/license.lic
+    
     cat <<EOF > index.py
 from Crypto.Hash import SHA, SHA256
 from Crypto.Signature import PKCS1_v1_5
