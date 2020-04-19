@@ -8,7 +8,7 @@ After this step, it will append the signature as a key to the licence JSON dicti
 We then also save the public key, which we will use in OO to verify our license.
 
 ## Patching
-OnlyOffice changed the way they ship their Docker images and are now using "compiled" binaries of NodeJS code. This script will search the binary file for OnlyOffice's PEM certificate and replace it with the one generated earlier. The script automatically starts OnlyOffice DocumentServer after the operation
+OnlyOffice changed the way they ship their Docker images and are now using "compiled" binaries of NodeJS code. This script will search the binary file for OnlyOffice's PEM certificate and replace it with the one generated earlier. Works only for version 5.5.0. In version 5.5.1 the public key has been removed or hidden  The script automatically starts OnlyOffice DocumentServer after the operation
 
 # How to use
 Change the entrypoint of your docker-compose file to :
