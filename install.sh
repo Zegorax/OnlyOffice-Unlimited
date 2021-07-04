@@ -6,7 +6,7 @@ if test -f "$FILE"; then
 else
   apt-get update && apt-get install -y build-essential libssl-dev libffi-dev python3-dev 
     wget https://bootstrap.pypa.io/get-pip.py
-    python3.9 get-pip.py
+    python3 get-pip.py
     pip install pycrypto
     rm -f /var/www/onlyoffice/Data/license.lic
     
