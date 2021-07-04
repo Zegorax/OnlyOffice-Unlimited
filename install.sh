@@ -87,7 +87,7 @@ for file in files:
 
 EOF
 
-    python3.6 index.py
+    python3 index.py
 
     echo Patching docservice and convert...
 
