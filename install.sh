@@ -4,7 +4,13 @@ FILE=OO_PubKey
 if test -f "$FILE"; then
   echo Patch has already been applied. Starting DocumentServer...
 else
-  apt-get update && apt-get install -y python3.6
+  apt-get update && apt-get install -y build-essential checkinstall libreadline-gplv2-dev libncursesw5-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev
+    wget https://www.python.org/ftp/python/3.6.0/Python-3.6.0.tar.xz
+    tar xvf Python-3.6.0.tar.xz
+    cd Python-3.6.0/
+    ./configure –enable-optimizations
+    make altinstall
+    cd ..
     wget https://bootstrap.pypa.io/get-pip.py
     python3.6 get-pip.py
     pip install pycrypto
