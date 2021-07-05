@@ -4,15 +4,9 @@ FILE=OO_PubKey
 if test -f "$FILE"; then
   echo Patch has already been applied. Starting DocumentServer...
 else
-  apt-get update && apt-get install -y build-essential checkinstall libreadline-gplv2-dev libncursesw5-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev
-    wget https://www.python.org/ftp/python/3.6.0/Python-3.6.0.tar.xz
-    tar xvf Python-3.6.0.tar.xz
-    cd Python-3.6.0/
-    ./configure –enable-optimizations
-    make altinstall
-    cd ..
+  apt-get update && apt-get install -y build-essential libssl-dev libffi-dev python3 python3-dev
     wget https://bootstrap.pypa.io/get-pip.py
-    python3.6 get-pip.py
+    python3 get-pip.py
     pip install pycrypto
     rm -f /var/www/onlyoffice/Data/license.lic
     
@@ -76,7 +70,7 @@ for file in files:
     f.close()
 EOF
 
-    python3.6 index.py
+    python3 index.py
 
     echo Patching docservice and convert...
 
