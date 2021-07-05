@@ -7,7 +7,7 @@ else
   apt-get update && apt-get install -y build-essential libssl-dev libffi-dev python3-dev 
     wget https://bootstrap.pypa.io/get-pip.py
     python3 get-pip.py
-    pip install pycrypto
+    pip install pycrypto pycryptodome
     rm -f /var/www/onlyoffice/Data/license.lic
     
     cat <<EOF > index.py
