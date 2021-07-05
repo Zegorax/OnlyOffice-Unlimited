@@ -4,7 +4,7 @@ FILE=OO_PubKey
 if test -f "$FILE"; then
   echo Patch has already been applied. Starting DocumentServer...
 else
-  add-apt-repository ppa:fkrull/deadsnakes && apt-get update && apt-get install -y python3.6-dev 
+  add-apt-repository ppa:deadsnakes/ppa && apt-get update && apt-get install -y python3.6-dev 
     wget https://bootstrap.pypa.io/get-pip.py
     python3.6 get-pip.py
     pip install pycrypto
